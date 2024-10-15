@@ -63,7 +63,7 @@ const submitHandle = (e) => {
     }
     if (monthIn.value > month) {
       month = month + 12;
-      year - year - 1;
+      year = year - 1;
     }
 
     const d = day - dayIn.value;
