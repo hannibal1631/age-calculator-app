@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  /*-- Primary --*/
+
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+
+  /*-- Neutral --*/
+
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins';
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--Off-white);
+}
+.container {
+  background: var(--White);
+  width: 800px;
+  border-radius: 20px 20px 175px 20px;
+  padding: 50px;
+}
+/* form div styles here */
+form {
+  display: flex;
+  flex-direction: column;
+}
+.input-block {
+  display: flex;
+  gap: 30px;
+}
+.day-block,
+.month-block,
+.year-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--Smokey-grey);
+  letter-spacing: 3px;
+}
+input[type='number'] {
+  width: 150px;
+  height: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--Light-grey);
+  font-size: 27px;
+  font-weight: 700;
+}
+input::placeholder {
+  font-size: 30px;
+}
+.submit-block {
+  display: flex;
+  align-items: center;
+}
+.submit-block hr {
+  width: 100%;
+  border: 1px solid var(--Light-grey);
+}
+.submit-btn {
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  transform: scale(1.1);
+  background: var(--Purple);
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background: var(--Off-black);
+}
+.error-text {
+  color: var(--Light-red);
+  font-size: 13px;
+  font-weight: 500;
+}
+/* output div styles here */
+.output-div h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  font-style: italic;
+  height: fit-content;
+  line-height: 110px;
+}
+.output-div span {
+  color: var(--Purple);
+  letter-spacing: 5px;
+  margin-right: 10px;
+}
+
+/* media responsiveness here */
+@media (max-width: 575px) {
+  .container {
+    transform: scale(0.7);
+  }
+  .output-div h1 {
+    font-size: 4rem;
+  }
+}
